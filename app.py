@@ -66,8 +66,7 @@ label_encoder = joblib.load(ENCODER_PATH)
 # ==========================================================
 # MEDIAPIPE HAND LANDMARKER
 # ==========================================================
-st.write("Hand model path:", HAND_MODEL_PATH)
-st.write("Hand model exists:", os.path.exists(HAND_MODEL_PATH))
+
 
 base_options = python.BaseOptions(
     model_asset_path=HAND_MODEL_PATH
