@@ -3,6 +3,7 @@ import cv2
 import numpy as np
 import joblib
 import av
+import os
 
 from PIL import Image
 
@@ -31,11 +32,26 @@ st.set_page_config(
 # PATHS
 # ==========================================================
 
-MODEL_PATH = r"C:\Users\Bharath\Desktop\indianlang\models\Ann_model.pkl"
 
-ENCODER_PATH = r"C:\Users\Bharath\Desktop\indianlang\models\Label_encoder.pkl"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-HAND_MODEL_PATH = r"C:\Users\Bharath\Desktop\indianlang\models\hand_landmarker .task"
+MODEL_PATH = os.path.join(
+    BASE_DIR,
+    "models",
+    "Ann_model.pkl"
+)
+
+ENCODER_PATH = os.path.join(
+    BASE_DIR,
+    "models",
+    "Label_encoder.pkl"
+)
+
+HAND_MODEL_PATH = os.path.join(
+    BASE_DIR,
+    "models",
+    "hand_landmarker.task"
+)
 
 
 # ==========================================================
